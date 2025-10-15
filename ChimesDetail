@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chimes — Gurgaon (Chimes 61)</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height: 1.6; margin: 0; padding: 0; background:#f6f8fa; color:#111; }
+    .container { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 8px 24px rgba(15,20,25,0.06); padding: 28px; }
+    header { display:flex; gap:16px; align-items:center; }
+    .logo { width:84px; height:84px; border-radius:8px; background:#e9eef6; display:flex; align-items:center; justify-content:center; font-weight:700; color:#2b4a8a; }
+    h1 { margin: 0; font-size: 1.6rem; }
+    .meta { color:#555; margin-top:6px; font-size:0.95rem; }
+    .hero { margin-top:18px; display:grid; grid-template-columns: 1fr 280px; gap:18px; }
+    .about p { margin:0 0 12px 0; }
+    .card { background:#fbfdff; border-radius:8px; padding:12px; box-shadow: inset 0 0 0 1px rgba(14,20,30,0.02); }
+    .stats { display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
+    .stat { background:#fff; padding:10px 12px; border-radius:8px; min-width:120px; text-align:center; box-shadow:0 2px 8px rgba(12,18,24,0.04); }
+    .stat b { display:block; font-size:1.06rem; }
+    footer { margin-top:18px; color:#666; font-size:0.9rem; }
+    img.building { width:100%; border-radius:8px; object-fit:cover; height:100%; max-height:300px; display:block; }
+    @media (max-width:720px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="logo">Chimes</div>
+      <div>
+        <h1>Chimes — Chimes 61 (Sector 44, Gurugram)</h1>
+        <div class="meta">A modern LEED-Gold commercial building located near HUDA City Centre metro, Gurugram.</div>
+      </div>
+    </header>
+
+    <section class="hero" aria-label="Overview">
+      <div class="about">
+        <div class="card">
+          <h2>Overview</h2>
+          <p>
+            Chimes 61 is a flagship commercial building developed by the Chimes Group in Sector 44, Gurugram. 
+            The property is designed with sustainability and workplace wellbeing in mind and has attracted a mix of corporate tenants over the years.
+          </p>
+          <p>
+            Designed by an experienced architecture studio, the building emphasizes natural light, open spaces and modern interiors to create a professional yet calm environment.
+          </p>
+        </div>
+
+        <div class="card" style="margin-top:12px;">
+          <h2>Notable Features</h2>
+          <div class="stats">
+            <div class="stat"><b>LEED Gold</b><span>Green-certified design</span></div>
+            <div class="stat"><b>~175,000 sq.ft.</b><span>Total built-up area</span></div>
+            <div class="stat"><b>Ground + 6</b><span>Floors + 2 basements</span></div>
+            <div class="stat"><b>Solar & EV</b><span>Rooftop solar & EV charging</span></div>
+            <div class="stat"><b>24/7</b><span>Security & Power backup</span></div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <!-- Replace the src below with a real image URL if you have one -->
+        <img class="building" src="PLACEHOLDER_IMAGE_URL" alt="Chimes 61 building, Sector 44 Gurugram">
+        <div style="margin-top:10px; font-size:0.95rem; color:#444;">
+          <strong>Address:</strong><br>
+          61, Sector 44, Gurugram, Haryana 122003
+        </div>
+      </aside>
+    </section>
+
+    <section style="margin-top:18px;">
+      <h2>Why it matters for businesses</h2>
+      <p>
+        Chimes 61 is positioned in a well-connected institutional pocket of Gurugram — within walking distance of HUDA City Centre metro — making it attractive for firms that need both visibility and accessibility.
+        Its green credentials and modern services (like EV charging and reliable backup power) keep operational costs and environmental impact lower than a conventional office tower.
+      </p>
+    </section>
+
+    <footer>
+      <div>Contacts & more: Chimes Group (official office in Gurugram).</div>
+      <div style="margin-top:8px; font-size:0.85rem; color:#666;">
+        <em>Note:</em> Replace the placeholder image with an actual photo URL if you want the page to display a real photograph.
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
