@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chimes — Important Alerts (Basic)</title>
+  <style>
+    /* Minimal, readable styling */
+    :root{
+      --bg:#0b1020; --panel:#0f172a; --ink:#e5ecf5; --muted:#9fb0c6; --edge:#2a3850;
+      --ok:#22c55e; --warn:#f59e0b; --bad:#ef4444; --info:#38bdf8;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Inter,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    .wrap{max-width:1000px;margin:auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+    h1{font-size:1.25rem;margin:0}
+    .muted{color:var(--muted);font-size:.9rem}
+    .controls{display:flex;gap:8px;flex-wrap:wrap}
+    input,select,button{background:var(--panel);color:var(--ink);border:1px solid var(--edge);border-radius:8px;padding:8px 10px}
+    button{cursor:pointer}
+    .card{background:var(--panel);border:1px solid var(--edge);border-radius:12px;overflow:hidden}
+    .card__head{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid var(--edge)}
+    .card__body{padding:14px}
+    table{width:100%;border-collapse:separate;border-spacing:0 8px}
+    th{color:var(--muted);text-align:left;font-weight:600;font-size:.85rem;padding:0 10px 6px}
+    td{background:#0c142a;border:1px solid var(--edge);padding:10px 10px}
+    tr td:first-child{border-top-left-radius:10px;border-bottom-left-radius:10px}
+    tr td:last-child{border-top-right-radius:10px;border-bottom-right-radius:10px}
+    .pill{display:inline-block;padding:4px 8px;border-radius:999px;font-size:.78rem;border:1px solid var(--edge);background:#0b1430;color:var(--muted)}
+    .sev-warning{color:var(--warn)}
+    .sev-critical{color:var(--bad)}
+    .status-triggered{color:var(--info)}
+    .status-acknowledged{color:#a78bfa}
+    .status-resolved{color:var(--ok)}
+    a{color:#b7d4ff;text-decoration:none}
+    a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Chimes — Important Alerts</h1>
+        <div class="muted">Basic HTML-only page for viewing warnings & criticals</div>
+      </div>
+      <div class="controls">
+        <input type="search" placeholder="Search message/commit/author" />
+        <select>
+          <option>Severity: All</option>
+          <option>warning</option>
+          <option>critical</option>
+        </select>
+        <select>
+          <option>Status: All</option>
+          <option>triggered</option>
+          <option>acknowledged</option>
+          <option>resolved</option>
+        </select>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="card__head">
+        <strong>Recent (sample)</strong>
+        <span class="pill">Timezone: IST</span>
+      </div>
+      <div class="card__body">
+        <table>
+          <thead>
+            <tr>
+              <th style="width:110px">Time</th>
+              <th>App</th>
+              <th>Env</th>
+              <th>Severity</th>
+              <th>Title</th>
+              <th>Status</th>
+              <th>Ack by</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- A few hand-filled rows (you can paste CSV data later) -->
+            <tr>
+              <td>2025-10-16 16:51</td>
+              <td>checkout-api</td>
+              <td>prod / mumbai</td>
+              <td class="sev-critical">critical</td>
+              <td>Service outage</td>
+              <td class="status-triggered">triggered</td>
+              <td>—</td>
+              <td><a href="#">open</a></td>
+            </tr>
+            <tr>
+              <td>2025-10-16 15:22</td>
+              <td>envoy</td>
+              <td>prod / delhi</td>
+              <td class="sev-warning">warning</td>
+              <td>CPU throttle observed</td>
+              <td class="status-acknowledged">acknowledged</td>
+              <td>neha</td>
+              <td><a href="#">open</a></td>
+            </tr>
+            <tr>
+              <td>2025-10-16 14:47</td>
+              <td>kafka-consumer</td>
+              <td>staging / us-east-1</td>
+              <td class="sev-critical">critical</td>
+              <td>Kafka consumer lag spike</td>
+              <td class="status-resolved">resolved</td>
+              <td>vinay</td>
+              <td><a href="#">open</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="muted" style="margin-top:14px">Tip: This is a static basic layout. You can wire it to your API later.</p>
+  </div>
+</body>
+</html>
