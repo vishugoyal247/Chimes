@@ -1,0 +1,64 @@
+# pipetrack_usecase.yaml
+usecase:
+  name: "Data ETL Pipeline"
+  description: "Track the flow and status of the ETL process for our data warehouse."
+  version: "1.0"
+  date_created: "2025-10-16"
+
+# Define the stages of the pipeline
+pipeline_stages:
+  - stage: "Extract"
+    description: "Extract data from multiple sources (e.g., APIs, databases)."
+    status: "completed"
+    timestamp: "2025-10-16T09:00:00Z"
+    logs:
+      - message: "Successfully connected to the source API."
+        level: "info"
+        timestamp: "2025-10-16T08:45:00Z"
+      - message: "Data extraction completed successfully."
+        level: "info"
+        timestamp: "2025-10-16T09:00:00Z"
+  - stage: "Transform"
+    description: "Clean and transform data to fit the target schema."
+    status: "in-progress"
+    timestamp: "2025-10-16T09:10:00Z"
+    logs:
+      - message: "Started transformation process."
+        level: "info"
+        timestamp: "2025-10-16T09:10:00Z"
+      - message: "Transformation completed for dataset A."
+        level: "info"
+        timestamp: "2025-10-16T09:45:00Z"
+  - stage: "Load"
+    description: "Load the transformed data into the data warehouse."
+    status: "pending"
+    timestamp: "2025-10-16T10:00:00Z"
+    logs: []
+
+# Define the monitoring/alerting configurations
+monitoring:
+  alerts:
+    - name: "Failed Extraction Alert"
+      description: "Alert when extraction fails."
+      condition: "status == 'failed'"
+      severity: "high"
+      action: "send_email"
+      recipient: "team@example.com"
+      trigger_time: "2025-10-16T09:15:00Z"
+    - name: "Slow Transformation Alert"
+      description: "Alert when transformation takes more than 30 minutes."
+      condition: "duration > 30m"
+      severity: "medium"
+      action: "send_sms"
+      recipient: "+1234567890"
+      trigger_time: "2025-10-16T09:40:00Z"
+
+# Define the pipeline output information
+output:
+  status: "pending"
+  last_run:
+    timestamp: "2025-10-15T20:00:00Z"
+    success: false
+  next_run:
+    timestamp: "2025-10-17T10:00:00Z"
+  frequency: "daily"
